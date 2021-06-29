@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.typekit.net/ote6pql.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<script src="https://s3.amazonaws.com/fed-nhl-microsites/prod/vendor/iframe-resizer/js/iframeResizer.contentWindow.min.js"></script>
+
+<base target="_parent">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/buq8rhd.css">
+
+<style>
+
+    body {
+        background-color:transparent;
+        padding-top:15px;
+        width:100%;
+    }
+p {
+  text-align: center;
+  font-size: 60px;
+  font-family:"Montserrat", sans-serif;
+  font-weight:600;
+  color:#ffffff;
+  letter-spacing:2px;
+  box-shadow:inset;
+}
+
+h1, h2 {
+font-family:"industry", sans-serif;
+  font-weight:500;
+  color:#fff;
+  margin:5px;
+  font-size:30px;
+  text-transform:uppercase;
+  letter-spacing: 0.02em;
+}
+
+
+.container {
+    background-color:rgba(255,255,255,.2);
+    padding:10px;
+    display:block;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5px;
+    margin-bottom:20px;
+    max-width:1000px;
+    margin:auto;
+
+}
+
+.column {
+width:23%;
+float:left;
+position:relative;
+margin:0 1% 0 1%;
+text-align: center;
+font-size: 20px;
+font-family:"industry", sans-serif;
+color:#fff;
+}
+
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-family:"Montserrat", sans-serif;
+  background-color:#c8102e;
+  padding:10px;
+  line-height:30px;
+  font-weight:normal;
+  text-transform:uppercase;
+}
+
+.subhead {
+  text-align: center;
+  font-size: 25px;
+  font-family:"Montserrat", sans-serif;
+  color:#cf142b;
+  margin: 5px;
+  font-weight:bold;
+}
+.button {  
+    display:block;
+    font-family:Sintony, sans-serif;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:100%;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size:14px;
+    text-align:center;
+    text-decoration:none;
+    background-color:#cf142b;
+    color:#ffffff;
+    float:left;
+    position:relative;
+    width:100%;
+}
+
+.button:hover {  
+
+    background-color:#ed1e40;
+text-decoration:none;
+color:white;
+}
+
+.button-row {
+    width:100%;
+    float:left;
+    position:relative;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.half-column {
+width:50%;
+float:left;
+position:relative;
+padding:0% 3%;
+}
+
+.full-column {
+    width:100%;
+    float:left;
+    position:relative;
+    padding: 0% 3%;
+margin-top:18px;
+}
+
+</style>
+</head>
+<body>
+
+        <!--COUNTDOWN-->
+<div class="container">
+    <center>
+    <h1>Wednesday, June 15, 2021 - 9:00AM ET</h1></center>
+<div class="column"><p id="days">-</p>DAYS</div>
+<div class="column"><p id="hours">-</p>HOURS</div>
+<div class="column"><p id="mins">-</p>MINUTES</div>
+<div class="column"><p id="secs">-</p>SECONDS</div>
+<script>
+// Set the date we're counting down to
+var countDownDate = Date.parse("Jul 15, 2021 09:00:00");
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="days"
+    document.getElementById("days").innerHTML = days;
+
+        // Output the result in an element with id="hours"
+    document.getElementById("hours").innerHTML = hours;
+
+        // Output the result in an element with id="mins"
+    document.getElementById("mins").innerHTML = minutes;
+
+            // Output the result in an element with id="secs"
+    document.getElementById("secs").innerHTML = seconds;
+
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+</div>
+
+
+
+
+
+
+
+</body></html>
